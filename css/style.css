@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  color: #01162c;
+  font-family: "SF Display", sans-serif;
+  font-weight: 400;
+  min-height: 100vh; }
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 700;
+  src: url("/media/Fonts/SF-Pro-Display-Bold.otf"); }
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 500;
+  src: url("/media/Fonts/SF-Pro-Display-Medium.otf"); }
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 400;
+  src: url("/media/Fonts/SF-Pro-Display-Regular.otf"); }
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 300;
+  src: url("/media/Fonts/SF-Pro-Display-Light.otf"); }
