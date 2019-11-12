@@ -3,17 +3,75 @@
     align-items: center;
     height: 10rem;
     color: $color-white;
+    justify-content: space-between;
 
     &__logo {
-        flex: 1;
         font-size: 2.5rem;
         font-weight: 700;
+        transition: all 0.2s;
+
+
+
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
 
         &--link,
         &--link:active,
         &--link:visited {
             color: white;
             text-decoration: none;
+            transform: scale(1.1);
+
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            position: relative;
+            z-index: 5;
+            transition: all 0.4s;
+        }
+
+        &--link:hover {
+            color: $color-blue-primary;
+            transform: translateY(-2px);
+        }
+
+        &--link::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10%;
+            height: 100%;
+            transform: skewX(10deg);
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, transparent 0%) no-repeat;
+            // background: white;
+            background-size: 0%;
+            background-position: 50%;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            transition: background 0.4s, width 0.2s 0.2s;
+        }
+
+        &--link:hover::before {
+            opacity: 1;
+            visibility: visible;
+            width: 100%;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 100%, transparent 0%) no-repeat;
+            background-size: 100%;
+            box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.3);
         }
 
         &--text {
@@ -26,21 +84,63 @@
     }
 
     &__nav {
-        flex: 1;
         display: flex;
         justify-content: flex-end;
         font-size: 1.6rem;
         font-weight: 500;
+        position: relative;
 
         &--link,
         &--link:active,
         &--link:visited {
             color: white;
             text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            position: relative;
+            z-index: 5;
+            transition: all 0.4s;
 
             &:not(:last-child) {
                 margin-right: 3.5rem;
             }
+        }
+
+        &--link:hover {
+            color: $color-blue-primary;
+            transform: translateY(-2px);
+        }
+
+        &--link:hover::before {
+            opacity: 1;
+            visibility: visible;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 100%, transparent 0%) no-repeat;
+            background-size: 100%;
+            box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.3);
+        }
+
+        &--link::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: skewX(10deg);
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, transparent 0%) no-repeat;
+            // background: white;
+            background-size: 0%;
+            background-position: 0px 0px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.4s;
+        }
+
+        &--link:active {
+            transform: translateY(1px);
         }
     }
 }
