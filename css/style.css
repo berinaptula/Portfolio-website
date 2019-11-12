@@ -7,6 +7,9 @@
 *::after {
   box-sizing: inherit; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -16,6 +19,16 @@ body {
   font-family: "SF Display", sans-serif;
   font-weight: 400;
   min-height: 100vh; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.header {
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #153557, #01162c); }
 
 @font-face {
   font-family: "SF Display";
@@ -36,3 +49,36 @@ body {
   font-family: "SF Display";
   font-weight: 300;
   src: url("/media/Fonts/SF-Pro-Display-Light.otf"); }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  color: #fff; }
+  .navbar__logo {
+    flex: 1;
+    font-size: 2.5rem;
+    font-weight: 700; }
+    .navbar__logo--link, .navbar__logo--link:active, .navbar__logo--link:visited {
+      color: white;
+      text-decoration: none; }
+    .navbar__logo--text {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6rem; }
+  .navbar__nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    font-weight: 500; }
+    .navbar__nav--link, .navbar__nav--link:active, .navbar__nav--link:visited {
+      color: white;
+      text-decoration: none; }
+      .navbar__nav--link:not(:last-child), .navbar__nav--link:active:not(:last-child), .navbar__nav--link:visited:not(:last-child) {
+        margin-right: 3.5rem; }
+
+.intro__shape {
+  width: 5rem;
+  height: 5rem;
+  position: absolute; }

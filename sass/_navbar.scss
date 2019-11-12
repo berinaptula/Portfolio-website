@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    color: $color-white;
+
+    &__logo {
+        flex: 1;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        &--link,
+        &--link:active,
+        &--link:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        &--text {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6rem;
+
+        }
+
+    }
+
+    &__nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &--link,
+        &--link:active,
+        &--link:visited {
+            color: white;
+            text-decoration: none;
+
+            &:not(:last-child) {
+                margin-right: 3.5rem;
+            }
+        }
+    }
+}

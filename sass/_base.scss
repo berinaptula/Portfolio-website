@@ -9,6 +9,10 @@
     box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -18,10 +22,18 @@ body {
     color: $color-blue-primary;
     font-family: "SF Display", sans-serif;
     font-weight: 400;
-
     min-height: 100vh;
+    // overflow-x: hidden;
 }
 
-#arrow {
-    fill: red;
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba($color-blue-primary-light, 1), rgba($color-blue-primary, 1))
 }
