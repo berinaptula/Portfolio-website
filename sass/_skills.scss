@@ -34,6 +34,10 @@
     width: 33.33333333333333%;
     padding: 3rem;
 
+    @media only screen and (max-width:$bp-lg) {
+        padding: 2rem;
+    }
+
     &__icon {
         font-size: 6rem;
         margin-bottom: 2rem;
@@ -54,8 +58,16 @@
     &__description {
         color: $color-gray;
         font-weight: 500;
-        padding-right: 6rem;
+        padding-right: 4rem;
         font-size: 1.6rem;
+
+        @media only screen and (max-width:$bp-lg) {
+            padding-right: 2rem;
+        }
+
+        @media only screen and (max-width:$bp-md) {
+            padding-right: 1rem;
+        }
     }
 
 }

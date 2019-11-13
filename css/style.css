@@ -126,6 +126,12 @@ main {
       transition: all 0.4s; }
       .navbar__nav--link:not(:last-child), .navbar__nav--link:active:not(:last-child), .navbar__nav--link:visited:not(:last-child) {
         margin-right: 3.5rem; }
+        @media only screen and (max-width: 64em) {
+          .navbar__nav--link:not(:last-child), .navbar__nav--link:active:not(:last-child), .navbar__nav--link:visited:not(:last-child) {
+            margin-right: 1rem; } }
+        @media only screen and (max-width: 53.12em) {
+          .navbar__nav--link:not(:last-child), .navbar__nav--link:active:not(:last-child), .navbar__nav--link:visited:not(:last-child) {
+            margin-right: 0.2rem; } }
     .navbar__nav--link:hover {
       color: #01162c;
       transform: translateY(-2px); }
@@ -171,32 +177,116 @@ main {
     display: flex;
     justify-content: flex-end;
     position: relative; }
+    @media only screen and (orientation: portrait) {
+      .intro__img {
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        width: 80%; } }
+    @media only screen and (max-width: 40em) and (orientation: portrait) {
+      .intro__img {
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        width: 100%; } }
+    @media only screen and (max-width: 64em) and (orientation: landscape) {
+      .intro__img {
+        width: 80%; } }
     .intro__img--container {
       width: 90%;
       height: 100%;
       display: flex;
       z-index: 999; }
+      @media only screen and (max-width: 68.5em) and (orientation: landscape) {
+        .intro__img--container {
+          width: 100%; } }
+      @media only screen and (max-width: 40em) and (orientation: portrait) {
+        .intro__img--container {
+          width: 100%; } }
       .intro__img--container img {
         width: 100%;
         object-fit: contain;
         object-position: bottom; }
+        @media only screen and (max-width: 40em) and (orientation: portrait) {
+          .intro__img--container img {
+            width: 150%; } }
   .intro__text {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative; }
+    @media only screen and (orientation: portrait) {
+      .intro__text {
+        position: absolute;
+        left: 10%;
+        top: 15%;
+        width: 80%; } }
+    @media only screen and (max-width: 40em) and (orientation: portrait) {
+      .intro__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 9999;
+        position: static;
+        align-items: center;
+        width: 100%; } }
     .intro__text__container {
       position: absolute;
       top: 30%;
       color: #fff; }
+      @media only screen and (max-width: 40em) and (orientation: portrait) {
+        .intro__text__container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          top: 0%;
+          position: static;
+          background: linear-gradient(to right bottom, #01162c, #153557);
+          padding: 1rem;
+          animation: introHeadingBg 0.3s ease-out forwards;
+          background-position: left;
+          transition: all 1s;
+          width: 0%; }
+        @keyframes introHeadingBg {
+          to {
+            width: 80%; } }
+          .intro__text__container > * {
+            opacity: 0;
+            visibility: hidden;
+            animation: headingFadeIn 0.2s 0.3s ease-in-out forwards; }
+        @keyframes headingFadeIn {
+          to {
+            opacity: 1;
+            visibility: visible; } } }
     .intro__text--heading {
       font-size: 8rem;
       font-weight: 700; }
+      @media only screen and (max-width: 64em) {
+        .intro__text--heading {
+          font-size: 5rem; } }
+      @media only screen and (max-width: 64em) and (orientation: portrait) {
+        .intro__text--heading {
+          font-size: 7rem; } }
+      @media only screen and (max-width: 53.12em) and (orientation: landscape) {
+        .intro__text--heading {
+          font-size: 4rem; } }
     .intro__text--sub-heading {
       font-size: 5rem;
       font-weight: 300;
       margin-left: 3rem; }
+      @media only screen and (max-width: 64em) {
+        .intro__text--sub-heading {
+          font-size: 2.5rem; } }
+      @media only screen and (max-width: 64em) and (orientation: portrait) {
+        .intro__text--sub-heading {
+          font-size: 5rem; } }
+      @media only screen and (max-width: 53.12em) and (orientation: landscape) {
+        .intro__text--sub-heading {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 53.12em) and (orientation: portrait) {
+        .intro__text--sub-heading {
+          font-size: 4rem; } }
 
 #intro_triangle {
   width: 30rem;
@@ -207,6 +297,16 @@ main {
   transform-origin: center center;
   opacity: 0.2;
   z-index: 999999; }
+  @media only screen and (orientation: portrait) {
+    #intro_triangle {
+      top: 80%;
+      left: -30rem; } }
+  @media only screen and (max-width: 40em) and (orientation: portrait) {
+    #intro_triangle {
+      top: 0%;
+      left: -5rem;
+      width: 15rem;
+      height: 15rem; } }
 
 #intro_triangle2 {
   width: 25vw;
@@ -216,6 +316,19 @@ main {
   transform: rotateZ(95deg);
   transform-origin: center center;
   opacity: 0.4; }
+  @media only screen and (orientation: portrait) {
+    #intro_triangle2 {
+      width: 15vw;
+      height: 15vw;
+      bottom: -5rem;
+      right: 4rem; } }
+  @media only screen and (max-width: 40em) and (orientation: portrait) {
+    #intro_triangle2 {
+      width: 5vw;
+      height: 5vw;
+      bottom: 60vh;
+      right: 90vw;
+      opacity: 1; } }
 
 #intro_circle {
   width: 25vw;
@@ -225,6 +338,20 @@ main {
   max-width: 35rem;
   max-height: 35rem;
   opacity: 0.1; }
+  @media only screen and (orientation: portrait) {
+    #intro_circle {
+      width: 45rem;
+      height: 45rem;
+      top: 47vh;
+      right: -1rem; } }
+  @media only screen and (max-width: 40em) and (orientation: portrait) {
+    #intro_circle {
+      width: 100vw;
+      height: 100vw;
+      max-width: 1000rem;
+      max-height: 1000rem;
+      top: 0vh;
+      right: -10rem; } }
 
 #intro_circle2 {
   width: 15vw;
@@ -234,6 +361,12 @@ main {
   max-width: 35rem;
   max-height: 35rem;
   opacity: 0.4; }
+  @media only screen and (orientation: portrait) {
+    #intro_circle2 {
+      width: 15vw;
+      height: 15vw;
+      top: 30vh;
+      right: 105%; } }
 
 #intro_cross {
   width: 5vw;
@@ -244,6 +377,19 @@ main {
   max-width: 7rem;
   max-height: 7rem;
   opacity: 1; }
+  @media only screen and (orientation: portrait) {
+    #intro_cross {
+      width: 15vw;
+      height: 15vw;
+      top: 55vh;
+      right: 90%; } }
+  @media only screen and (max-width: 40em) and (orientation: portrait) {
+    #intro_cross {
+      width: 5vw;
+      height: 5vw;
+      top: 25vh;
+      right: 60%;
+      opacity: 0.2; } }
 
 #intro_cross2 {
   width: 2.5vw;
@@ -254,6 +400,13 @@ main {
   max-width: 3rem;
   max-height: 3rem;
   opacity: 0.1; }
+  @media only screen and (orientation: portrait) {
+    #intro_cross2 {
+      width: 5vw;
+      height: 5vw;
+      top: 5vh;
+      right: 0%;
+      opacity: 1; } }
 
 #intro_cross3 {
   width: 4vw;
@@ -263,7 +416,8 @@ main {
   transform: rotateZ(10deg);
   max-width: 5rem;
   max-height: 5rem;
-  z-index: 9999999; }
+  z-index: 9999999;
+  width: 5vw; }
 
 #intro_square {
   width: 15vw;
@@ -274,6 +428,18 @@ main {
   max-width: 25rem;
   max-height: 25rem;
   opacity: 0.25; }
+  @media only screen and (orientation: portrait) {
+    #intro_square {
+      width: 5vw;
+      height: 5vw;
+      bottom: -20vh;
+      left: 20%; } }
+  @media only screen and (max-width: 40em) and (orientation: portrait) {
+    #intro_square {
+      width: 50vw;
+      height: 50vw;
+      bottom: -10vh;
+      left: -10%; } }
 
 .skills {
   margin-top: 10rem; }
@@ -302,6 +468,9 @@ main {
 .skill {
   width: 33.33333333333333%;
   padding: 3rem; }
+  @media only screen and (max-width: 68.5em) {
+    .skill {
+      padding: 2rem; } }
   .skill__icon {
     font-size: 6rem;
     margin-bottom: 2rem; }
@@ -316,8 +485,14 @@ main {
   .skill__description {
     color: #a5a5a5;
     font-weight: 500;
-    padding-right: 6rem;
+    padding-right: 4rem;
     font-size: 1.6rem; }
+    @media only screen and (max-width: 68.5em) {
+      .skill__description {
+        padding-right: 2rem; } }
+    @media only screen and (max-width: 64em) {
+      .skill__description {
+        padding-right: 1rem; } }
 
 .portfolio {
   margin: 5rem auto; }
@@ -507,7 +682,6 @@ main {
 
 .about {
   width: 100vw;
-  background: salmon;
   position: relative;
   overflow: hidden;
   margin-top: 15rem; }
