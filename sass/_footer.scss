@@ -1,0 +1,69 @@
+.footer {
+    background: $footer-bg;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__contacts {
+        &--container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &--heading {
+            font-size: 2.5rem;
+            padding: 7.5rem 0;
+            padding-top: 15rem;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        &--contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 2rem;
+        }
+
+        &--icon {
+            width: 4rem;
+            height: 4rem;
+            color: $color-white;
+            font-size: 2rem;
+            border-radius: 50%;
+            background-color: $color-blue-primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--text {
+            font-size: 1.6rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__legal {
+        text-align: center;
+        font-size: 1.6rem;
+        color: $color-gray;
+        position: relative;
+        padding: 2rem;
+        width: 100%;
+        margin-top: 5rem;
+        border-top: 1px solid $color-gray;
+
+        &--logo {
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
