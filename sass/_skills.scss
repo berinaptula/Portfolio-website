@@ -6,6 +6,10 @@
         margin-left: calc(10% + 3rem);
         display: block;
         position: relative;
+
+        @media only screen and (max-width:$bp-mds) {
+            margin-left: 2rem;
+        }
     }
 
     &__heading::after {
@@ -20,6 +24,10 @@
         left: 0;
         background-color: black;
 
+        @media only screen and (max-width:$bp-mds) {
+            transform: translateX(30vw);
+        }
+
     }
 
     &__container {
@@ -27,25 +35,41 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 70%;
+        margin: 5rem auto;
+
+        @media only screen and (max-width:$bp-lg) {
+            width: 90%;
+        }
+
+        @media only screen and (max-width:$bp-mds) {
+            margin: 3rem auto;
+        }
     }
 }
 
 .skill {
     width: 33.33333333333333%;
-    padding: 3rem;
+    margin-bottom: 3rem;
 
-    @media only screen and (max-width:$bp-lg) {
-        padding: 2rem;
+    @media only screen and (max-width:$bp-lg) {}
+
+    @media only screen and (max-width:$bp-mds) {
+        padding: 0 1rem;
+    }
+
+    @media only screen and (max-width:$bp-sm) {
+        width: 50%;
     }
 
     &__icon {
-        font-size: 6rem;
+        font-size: 4rem;
         margin-bottom: 2rem;
     }
 
     img {
         margin-bottom: 2rem;
-        height: 6rem;
+        height: 4rem;
     }
 
     &__name {
