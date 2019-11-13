@@ -1,0 +1,127 @@
+.about {
+    width: 100vw;
+    background: salmon;
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 15rem;
+
+    &__container {
+        display: flex;
+        padding-top: 10rem;
+    }
+
+    &__photo {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-end;
+
+        &--container {
+            height: 50rem;
+
+            z-index: 999999999;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    &__text {
+
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+
+        &--container {
+            padding: 0 2rem;
+            margin: 0 auto;
+            width: 70%;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            z-index: 9999999;
+        }
+
+        &--heading {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        &--description {
+            font-size: 1.6rem;
+            font-weight: 400;
+            width: 80%;
+        }
+    }
+
+    &__shape {
+        width: 10rem;
+        height: 10rem;
+        position: absolute;
+    }
+}
+
+#about {
+    &_square {
+        width: 15rem;
+        height: 15rem;
+        transform-origin: center center;
+        transform: rotateZ(55deg);
+        top: 25rem;
+        left: -10rem;
+    }
+
+    &_square2 {
+        width: 20rem;
+        height: 20rem;
+        transform-origin: center center;
+        transform: rotateZ(35deg);
+        bottom: 2rem;
+        right: -12rem;
+    }
+
+    &_cross {
+        width: 8rem;
+        height: 8rem;
+        bottom: 20%;
+        left: 10%;
+    }
+
+    &_circle {
+        top: -7vh;
+        right: -1vw;
+        width: 35rem;
+        height: 35rem;
+        z-index: 1;
+    }
+
+    &_arrow {
+        width: 5rem;
+        height: 5rem;
+        bottom: 24rem;
+        right: -7rem;
+    }
+
+    &_triangle {
+        width: 20rem;
+        height: 20rem;
+        bottom: -10rem;
+        left: 0;
+        transform: rotateZ(20deg);
+    }
+
+    &_triangle2 {
+        width: 10rem;
+        height: 10rem;
+        top: 5rem;
+        right: 10rem;
+        transform: rotateZ(-20deg);
+    }
+}

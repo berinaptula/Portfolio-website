@@ -504,3 +504,100 @@ main {
         font-size: 2rem; }
     .portfolio__item-8--link:hover {
       transform: scale(1.2); }
+
+.about {
+  width: 100vw;
+  background: salmon;
+  position: relative;
+  overflow: hidden;
+  margin-top: 15rem; }
+  .about__container {
+    display: flex;
+    padding-top: 10rem; }
+  .about__photo {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-end; }
+    .about__photo--container {
+      height: 50rem;
+      z-index: 999999999; }
+      .about__photo--container img {
+        height: 100%; }
+  .about__text {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative; }
+    .about__text--container {
+      padding: 0 2rem;
+      margin: 0 auto;
+      width: 70%;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      z-index: 9999999; }
+    .about__text--heading {
+      font-size: 5rem;
+      font-weight: 700;
+      margin-bottom: 2rem; }
+    .about__text--description {
+      font-size: 1.6rem;
+      font-weight: 400;
+      width: 80%; }
+  .about__shape {
+    width: 10rem;
+    height: 10rem;
+    position: absolute; }
+
+#about_square {
+  width: 15rem;
+  height: 15rem;
+  transform-origin: center center;
+  transform: rotateZ(55deg);
+  top: 25rem;
+  left: -10rem; }
+
+#about_square2 {
+  width: 20rem;
+  height: 20rem;
+  transform-origin: center center;
+  transform: rotateZ(35deg);
+  bottom: 2rem;
+  right: -12rem; }
+
+#about_cross {
+  width: 8rem;
+  height: 8rem;
+  bottom: 20%;
+  left: 10%; }
+
+#about_circle {
+  top: -7vh;
+  right: -1vw;
+  width: 35rem;
+  height: 35rem;
+  z-index: 1; }
+
+#about_arrow {
+  width: 5rem;
+  height: 5rem;
+  bottom: 24rem;
+  right: -7rem; }
+
+#about_triangle {
+  width: 20rem;
+  height: 20rem;
+  bottom: -10rem;
+  left: 0;
+  transform: rotateZ(20deg); }
+
+#about_triangle2 {
+  width: 10rem;
+  height: 10rem;
+  top: 5rem;
+  right: 10rem;
+  transform: rotateZ(-20deg); }
