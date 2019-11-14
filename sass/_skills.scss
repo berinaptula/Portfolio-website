@@ -28,6 +28,10 @@
             transform: translateX(30vw);
         }
 
+        @media only screen and (max-width:$bp-xs) and (orientation:portrait) {
+            transform: translateX(50%);
+        }
+
     }
 
     &__container {
