@@ -92,6 +92,7 @@
             position: absolute;
             top: 30%;
             color: $color-white;
+            z-index: 999;
 
             @media only screen and (max-width:$bp-sm) and (orientation:portrait) {
                 display: flex;
@@ -143,7 +144,9 @@
                 font-size: 4rem;
             }
 
-            @media only screen and (max-width:$bp-sm) and (orientation:portrait) {}
+            @media only screen and (max-width:$bp-xs) and (orientation:portrait) {
+                font-size: 4.7rem;
+            }
         }
 
         &--sub-heading {
@@ -165,6 +168,10 @@
 
             @media only screen and (max-width:$bp-mds) and (orientation:portrait) {
                 font-size: 4rem;
+            }
+
+            @media only screen and (max-width:$bp-xs) and (orientation:portrait) {
+                font-size: 3rem;
             }
         }
     }
@@ -319,7 +326,7 @@
         transform: rotateZ(10deg);
         max-width: 5rem;
         max-height: 5rem;
-        z-index: 9999999;
+        z-index: 99999;
         width: 5vw;
 
     }

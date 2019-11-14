@@ -37,7 +37,7 @@
 
         &--container {
             height: 50rem;
-            z-index: 999999999;
+            z-index: 99999;
 
             img {
                 height: 100%;
@@ -54,7 +54,7 @@
 
         @media only screen and (max-width:$bp-sm) {
             padding: 9rem 0;
-            z-index: 999999999;
+            z-index: 999999;
             width: 100%;
             background: linear-gradient(to right bottom, rgba($color-blue-primary, 0.9), rgba($color-blue-primary-light, 0.9));
             color: white;
@@ -67,7 +67,7 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            z-index: 9999999;
+            z-index: 999999;
 
             @media only screen and (max-width:$bp-mds) {
                 width: 100%;

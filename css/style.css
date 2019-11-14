@@ -67,10 +67,96 @@ main {
   align-items: center;
   height: 10rem;
   color: #fff;
-  justify-content: space-between; }
-  @media only screen and (max-width: 53.12em) {
-    .navbar {
-      display: none; } }
+  justify-content: space-between;
+  z-index: 9999999999999999; }
+  .navbar__checkbox {
+    display: none;
+    z-index: 9999999999999999; }
+  .navbar__button {
+    background: #fff;
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 9999999999999999;
+    cursor: pointer;
+    box-shadow: 0 2rem 4.5rem rgba(0, 0, 0, 0.15);
+    text-align: center;
+    outline: none;
+    border: none;
+    display: none; }
+    @media only screen and (max-width: 64em) {
+      .navbar__button {
+        top: 4rem;
+        right: 4rem; } }
+    @media only screen and (max-width: 40em) {
+      .navbar__button {
+        display: block; } }
+    @media only screen and (max-width: 29.6em) {
+      .navbar__button {
+        top: 3rem;
+        right: 3rem;
+        width: 7rem;
+        height: 7rem; } }
+  .navbar__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(#01162c, #153557);
+    z-index: 9999999;
+    transition: all 0.4s;
+    transform: scale(0); }
+    @media only screen and (max-width: 64em) {
+      .navbar__background {
+        top: 4.5rem;
+        right: 4.5rem; } }
+    @media only screen and (max-width: 29.6em) {
+      .navbar__background {
+        top: 3.5rem;
+        right: 3.5rem; } }
+  .navbar__checkbox:checked ~ .navbar__background {
+    transform: scale(40); }
+  .navbar__checkbox:checked ~ .navbar__nav {
+    display: flex;
+    animation: fadeIn 1s linear forwards; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+  .navbar__icon {
+    position: relative;
+    margin-top: 3.5rem; }
+    .navbar__icon, .navbar__icon::before, .navbar__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #01162c;
+      display: inline-block;
+      transition: all 0.2s ease-out; }
+    .navbar__icon::before, .navbar__icon::after {
+      content: "";
+      position: absolute;
+      left: 0px; }
+    .navbar__icon::before {
+      top: -0.9rem; }
+    .navbar__icon::after {
+      top: 0.9rem; }
+  .navbar__button:hover .navbar__icon::before {
+    top: -1.1rem; }
+  .navbar__button:hover .navbar__icon::after {
+    top: 1.1rem; }
+  .navbar__checkbox:checked + .navbar__button .navbar__icon {
+    background-color: transparent; }
+  .navbar__checkbox:checked + .navbar__button .navbar__icon::before {
+    transform: rotate(135deg);
+    top: 0px; }
+  .navbar__checkbox:checked + .navbar__button .navbar__icon::after {
+    transform: rotate(-135deg);
+    top: 0px; }
   .navbar__logo {
     font-size: 2.5rem;
     font-weight: 700;
@@ -129,6 +215,22 @@ main {
     font-size: 1.6rem;
     font-weight: 500;
     position: relative; }
+    @media only screen and (max-width: 40em) {
+      .navbar__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 99999999;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        opacity: 0;
+        transition: all 1s; } }
     .navbar__nav--link, .navbar__nav--link:active, .navbar__nav--link:visited {
       color: white;
       text-decoration: none;
@@ -144,6 +246,10 @@ main {
         @media only screen and (max-width: 53.12em) {
           .navbar__nav--link:not(:last-child), .navbar__nav--link:active:not(:last-child), .navbar__nav--link:visited:not(:last-child) {
             margin-right: 0.2rem; } }
+        @media only screen and (max-width: 40em) {
+          .navbar__nav--link:not(:last-child), .navbar__nav--link:active:not(:last-child), .navbar__nav--link:visited:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 2rem; } }
     .navbar__nav--link:hover {
       color: #01162c;
       transform: translateY(-2px); }
@@ -246,7 +352,8 @@ main {
     .intro__text__container {
       position: absolute;
       top: 30%;
-      color: #fff; }
+      color: #fff;
+      z-index: 999; }
       @media only screen and (max-width: 40em) and (orientation: portrait) {
         .intro__text__container {
           display: flex;
@@ -283,6 +390,9 @@ main {
       @media only screen and (max-width: 53.12em) and (orientation: landscape) {
         .intro__text--heading {
           font-size: 4rem; } }
+      @media only screen and (max-width: 29.6em) and (orientation: portrait) {
+        .intro__text--heading {
+          font-size: 4.7rem; } }
     .intro__text--sub-heading {
       font-size: 5rem;
       font-weight: 300;
@@ -299,6 +409,9 @@ main {
       @media only screen and (max-width: 53.12em) and (orientation: portrait) {
         .intro__text--sub-heading {
           font-size: 4rem; } }
+      @media only screen and (max-width: 29.6em) and (orientation: portrait) {
+        .intro__text--sub-heading {
+          font-size: 3rem; } }
 
 #intro_triangle {
   width: 30rem;
@@ -428,7 +541,7 @@ main {
   transform: rotateZ(10deg);
   max-width: 5rem;
   max-height: 5rem;
-  z-index: 9999999;
+  z-index: 99999;
   width: 5vw; }
 
 #intro_square {
@@ -834,7 +947,7 @@ main {
         align-items: center; } }
     .about__photo--container {
       height: 50rem;
-      z-index: 999999999; }
+      z-index: 99999; }
       .about__photo--container img {
         height: 100%; }
   .about__text {
@@ -846,7 +959,7 @@ main {
     @media only screen and (max-width: 40em) {
       .about__text {
         padding: 9rem 0;
-        z-index: 999999999;
+        z-index: 999999;
         width: 100%;
         background: linear-gradient(to right bottom, rgba(1, 22, 44, 0.9), rgba(21, 53, 87, 0.9));
         color: white; } }
@@ -857,7 +970,7 @@ main {
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      z-index: 9999999; }
+      z-index: 999999; }
       @media only screen and (max-width: 53.12em) {
         .about__text--container {
           width: 100%; } }

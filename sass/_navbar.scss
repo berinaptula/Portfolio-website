@@ -4,17 +4,145 @@
     height: 10rem;
     color: $color-white;
     justify-content: space-between;
+    z-index: 9999999999999999;
 
-    @media only screen and (max-width:$bp-mds) {
+    @media only screen and (max-width:$bp-mds) {}
+
+    &__checkbox {
         display: none;
+        z-index: 9999999999999999;
+    }
+
+    &__button {
+        background: $color-white;
+        width: 7rem;
+        height: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 9999999999999999;
+        cursor: pointer;
+        box-shadow: 0 2rem 4.5rem rgba(#000000, 0.15);
+        text-align: center;
+        outline: none;
+        border: none;
+        display: none;
+
+        @media only screen and (max-width:$bp-md) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @media only screen and (max-width:$bp-sm) {
+            display: block;
+        }
+
+        @media only screen and (max-width:$bp-xs) {
+            top: 3rem;
+            right: 3rem;
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-blue-primary, $color-blue-primary-light);
+        z-index: 9999999;
+        transition: all 0.4s;
+        transform: scale(0);
+
+
+        @media only screen and (max-width:$bp-md) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @media only screen and (max-width:$bp-xs) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+
+    }
+
+    &__checkbox:checked~&__background {
+        transform: scale(40);
+    }
+
+    &__checkbox:checked~&__nav {
+        display: flex;
+        animation: fadeIn 1s linear forwards;
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-blue-primary;
+            display: inline-block;
+            transition: all 0.2s ease-out;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+        }
+
+        &::before {
+            top: -0.9rem;
+        }
+
+        &::after {
+            top: 0.9rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1.1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1.1rem;
+    }
+
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        transform: rotate(135deg);
+        top: 0px;
+
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        transform: rotate(-135deg);
+        top: 0px;
     }
 
     &__logo {
         font-size: 2.5rem;
         font-weight: 700;
         transition: all 0.2s;
-
-
 
         @keyframes bounce {
             0% {
@@ -94,6 +222,23 @@
         font-weight: 500;
         position: relative;
 
+        @media only screen and (max-width:$bp-sm) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 99999999;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            opacity: 0;
+            transition: all 1s;
+        }
+
         &--link,
         &--link:active,
         &--link:visited {
@@ -113,6 +258,11 @@
 
                 @media only screen and (max-width:$bp-mds) {
                     margin-right: 0.2rem;
+                }
+
+                @media only screen and (max-width:$bp-sm) {
+                    margin-right: 0;
+                    margin-bottom: 2rem;
                 }
             }
         }
