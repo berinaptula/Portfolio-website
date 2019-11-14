@@ -1,3 +1,7 @@
+import $ from 'jquery';
+import tilt from "tilt.js";
+import gsap from 'gsap';
+
 document.getElementById("about_triangle2").addEventListener("load", function () {
     var doc = this.getSVGDocument();
     var svg = doc.querySelector(".blue");
