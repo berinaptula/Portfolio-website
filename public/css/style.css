@@ -711,12 +711,11 @@ main {
     grid-template-rows: 100%;
     box-shadow: 0.3rem 2rem 1rem rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    transform-style: preserve-3d; }
     @media only screen and (max-width: 29.6em) and (orientation: portrait) {
       .portfolio__item {
         grid-template-columns: repeat(2, 50%) !important; } }
-    .portfolio__item:hover {
-      transform: scale(1.03); }
     .portfolio__item--description {
       grid-row: 1/-1;
       grid-column: 1/2;
@@ -727,7 +726,8 @@ main {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between; }
+      justify-content: space-between;
+      transform: translateZ(20px); }
       @media only screen and (max-width: 29.6em) and (orientation: portrait) {
         .portfolio__item--description {
           grid-column: 2/-1 !important; } }
@@ -737,9 +737,11 @@ main {
         padding: 2rem 0;
         width: 100%;
         font-size: 1.4rem;
-        font-weight: 500; }
+        font-weight: 500;
+        transform: translateZ(40px); }
       .portfolio__item--description-title {
-        font-size: 2rem; }
+        font-size: 2rem;
+        transform: translateZ(40px); }
       .portfolio__item--description-button {
         padding: 1.5rem 4rem;
         color: #fff;
@@ -748,7 +750,8 @@ main {
         outline: none;
         font-weight: 700;
         text-transform: uppercase;
-        cursor: pointer; }
+        cursor: pointer;
+        transform: translateZ(20px); }
         @media only screen and (max-width: 53.12em) and (orientation: portrait) {
           .portfolio__item--description-button {
             padding: 1rem 2rem; } }
@@ -822,7 +825,8 @@ main {
     grid-row: 3/5;
     grid-column: 1/4;
     grid-template-rows: repeat(2, 50%);
-    grid-template-columns: 100%; }
+    grid-template-columns: 100%;
+    display: none; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .portfolio__item-4 {
         grid-row: 4/5;
@@ -844,7 +848,8 @@ main {
     grid-row: 3/4;
     grid-column: 4/-1;
     grid-template-rows: 100%;
-    grid-template-columns: repeat(3, 33.33333%); }
+    grid-template-columns: repeat(3, 33.33333%);
+    display: none; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .portfolio__item-5 {
         grid-row: 5/6;
@@ -859,7 +864,8 @@ main {
     grid-row: 4/5;
     grid-column: 4/-1;
     grid-template-rows: 100%;
-    grid-template-columns: repeat(3, 33.33333%); }
+    grid-template-columns: repeat(3, 33.33333%);
+    display: none; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .portfolio__item-6 {
         grid-row: 6/7;
@@ -874,7 +880,8 @@ main {
     grid-row: 5/6;
     grid-column: 1/7;
     grid-template-rows: 100%;
-    grid-template-columns: repeat(3, 33.33333%); }
+    grid-template-columns: repeat(3, 33.33333%);
+    display: none; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .portfolio__item-7 {
         grid-row: 7/8;
@@ -896,6 +903,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: none;
     background: linear-gradient(to right bottom, #01162c, #153557); }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .portfolio__item-8 {

@@ -34,15 +34,15 @@
         <div class="intro">
             <div class="intro__img">
                 <object data="/media/icons/triangle.svg" type="image/svg+xml" class="intro__shape" id="intro_triangle"
-                    data-tilt>
+                >
                     <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
                 </object>
                 <object data="/media/icons/circle.svg" type="image/svg+xml" class="intro__shape" id="intro_circle"
-                    data-tilt>
+                >
                     <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
                 </object>
                 <object data="/media/icons/cross.svg" type="image/svg+xml" class="intro__shape" id="intro_cross3"
-                    data-tilt>
+                >
                     <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
                 </object>
                 <figure class="intro__img--container">
@@ -125,7 +125,7 @@
                 <div class="skill">
                     <i class="fas fa-toolbox skill__icon"></i>
                     <h3 class="skill__name">Useful tools</h3>
-                    <p class="skill__description">Experience with Scrollmagic & GSAP (Apple-like animations). Knowledge
+                    <p class="skill__description last">Experience with Scrollmagic & GSAP (Apple-like animations). Knowledge
                         in npm(node package management) and git. Experience with Adobe After Effects & Premiere pro.</p>
                 </div>
             </div>
@@ -133,7 +133,7 @@
 
         <section class="portfolio container">
             <h2 class="portfolio__heading container">Portfolio</h2>
-            <div class="portfolio__container loaded ">
+            <div class="portfolio__container">
                 <div class="portfolio__text">
                     <h2 class="portfolio__text--heading">My recent projects</h2>
                     <p class="portfolio__text--description">Here you can see all of my recent projects. Most of them are
@@ -160,7 +160,7 @@
                         <img src="/media/img/lol-1.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-3">
+                <div class="portfolio__item portfolio__item-3" >
                     <div class="portfolio__item--description item-3">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">Wine Restaurant</h2>
@@ -170,7 +170,7 @@
                         <img src="/media/img/wine.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-4">
+                <div class="portfolio__item portfolio__item-4" >
                     <div class="portfolio__item--description item-4">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">OP.GG clone</h2>
@@ -221,7 +221,7 @@
         </section>
         <section class="about">
             <object data="/media/icons/square.svg" type="image/svg+xml" class="about__shape" id="about_square">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" data-tilt/>
             </object>
             <object data="/media/icons/cross.svg" type="image/svg+xml" class="about__shape" id="about_cross">
                 <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
@@ -292,6 +292,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+
     <script src="scripts/index-bundle.js"></script>
 </body>
 
