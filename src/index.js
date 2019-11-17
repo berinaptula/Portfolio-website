@@ -413,23 +413,22 @@ function setAnimations() {
         .setTween(about)
         .addTo(controller);
 
+}
+$('.portfolio__load-more').click(function (e) {
+    // portfolioHook = 0.9;
+    // portfolioDuration = "80%";
+    // itemsToAnimate = portfolioDuration;
+    $('.portfolio__container').toggleClass('loaded')
+    $('.portfolio__item').toggleClass('showItem')
+    $('.portfolio__item-8').toggleClass('showItem')
+    showMoreBtnText();
+})
 
-    $('.portfolio__load-more').click(function (e) {
-        // portfolioHook = 0.9;
-        // portfolioDuration = "80%";
-        // itemsToAnimate = portfolioDuration;
-        $('.portfolio__container').toggleClass('loaded')
-        $('.portfolio__item').toggleClass('showItem')
-        $('.portfolio__item-8').toggleClass('showItem')
-        showMoreBtnText();
-    })
-
-    function showMoreBtnText() {
-        if ($('.portfolio__container').hasClass('loaded')) {
-            $('.portfolio__load-more').text('Show less')
-        } else {
-            $('.portfolio__load-more').text('Load more')
-        }
+function showMoreBtnText() {
+    if ($('.portfolio__container').hasClass('loaded')) {
+        $('.portfolio__load-more').text('Show less')
+    } else {
+        $('.portfolio__load-more').text('Load more')
     }
 }
 
@@ -480,6 +479,7 @@ const projects = [{
             img: ["media/img/fylo1.png", "media/img/fylo2.png", "media/img/fylo3.png"],
             alt: 'Fylo project',
             technologies: ['CSS Flexbox', "SASS"],
+            github: "https://github.com/berinaptula/Fylo-website"
         },
     }, {
         id: 'lol',
@@ -488,7 +488,8 @@ const projects = [{
             description: "This web-app looking website was to practice my CSS Flexbox and SASS skills. I learned a lot from this project, the most important being SVG icons and complex animations. The layout is completely responsive and suitable for every device. Also has browser support testing ability for CSS properties",
             img: ["media/img/lol1.png", "media/img/lol2.gif", "media/img/lol3.gif"],
             alt: 'League of Legends project',
-            technologies: ['CSS Flexbox', "SASS", "SVG"]
+            technologies: ['CSS Flexbox', "SASS", "SVG"],
+            github: "https://github.com/berinaptula/League-of-Legends"
         }
     },
     {
@@ -498,7 +499,8 @@ const projects = [{
             description: "This was the ultimate CSS Grid website I built. It was a personal project. The layout is built entirely on CSS Grid to practice my CSS Grid skills and learn new things at the same time. It was quite a challenge, but in the end I am very satisfied with the end product, plus - I have learned a lot of new things.",
             img: ["media/img/wine1.png", "media/img/wine2.gif", "media/img/wine3.gif"],
             alt: 'Winery photo',
-            technologies: ['CSS Grid', "SASS"]
+            technologies: ['CSS Grid', "SASS"],
+            github: "https://github.com/berinaptula/Winery"
         }
     },
     {
@@ -508,7 +510,8 @@ const projects = [{
             description: "I was learning Bootstrap4 and was looking for a cool project to build. After looking for a quite a bit of time and finding nothing interesting, I decided to take half an hour break, and just relax my mind with video games. Just then, I thought about op.gg website, and it looks as if it was entirely built with Bootstrap. I decided to give it a try, and it turned out to be great.",
             img: ["media/img/opgg1.png", "media/img/opgg2.gif", "media/img/opgg3.gif"],
             alt: 'Winery photo',
-            technologies: ['Bootstrap4', "SASS"]
+            technologies: ['Bootstrap4', "SASS"],
+            github: "https://github.com/berinaptula/eune.op.gg-clone"
         }
     },
     {
@@ -518,7 +521,8 @@ const projects = [{
             description: "This Real Estate website I built was to practice my Javascript(ES6) and Webpack skills. It was very fun experimenting new JavaScript features, whcih make coding a lot easier to both write and read. I mostly paid attention to the technical part, rather than the design itself. I practiced filtering, sorting, calculating the time with Moment.JS and also LocalStorage to save the liked properties. It was definitely a challenging project, and I am very proud of it.",
             img: ["media/img/realestate1.png", "media/img/realestate2.gif", "media/img/realestate3.gif", "media/img/realestate4.gif"],
             alt: 'Real Estate website',
-            technologies: ['JavaScript', "Webpack", "SASS"]
+            technologies: ['JavaScript', "Webpack", "SASS"],
+            github: "https://github.com/berinaptula/Real-Estate-Website"
         }
     },
     {
@@ -528,7 +532,8 @@ const projects = [{
             description: "A website that I built for my mom's beauty salon. During that time, I was learning very Advanced CSS properties and ways of interacting with the elements. I built the entire website with the 'legacy' CSS Float system, because it is compatiable with literally every browser. I learned about styling my own checkboxes and creating amazing navigation menus.",
             img: ["media/img/beri1.png", "media/img/beri2.gif", "media/img/beri3.gif"],
             alt: 'Beauty Salon Beri',
-            technologies: ['CSS Float', "SASS"]
+            technologies: ['CSS Float', "SASS"],
+            github: "https://github.com/berinaptula/SalonBeri"
         }
     },
     {
@@ -536,9 +541,10 @@ const projects = [{
         props: {
             heading: "My portfolio website",
             description: "It is indeed the website you are currently in. The reason I put it here is because I am very proud of it. It was designed by a professional designer, and built entirely by me.This website is a proof that I can turn any design into a fully responsive website with complex on scroll animations. I implemented GSAP and ScrollMagic in order to achieve this functionality and I loved it a lot.",
-            img: ["media/img/fylo.png", "media/img/1fylo.png", "media/img/wine.png"],
+            img: ["media/img/berin1.png"],
             alt: 'Beauty Salon Beri',
-            technologies: ['CSS Grid & Flex', "SASS", "GSAP", "SrollMagic"]
+            technologies: ['CSS Grid & Flex', "SASS", "GSAP", "SrollMagic"],
+            github: "https://github.com/berinaptula/Fylo-website"
         }
     }
 
@@ -561,6 +567,7 @@ $('.portfolio__item--description-button').click(function (e) {
     $('.portfolio__popup--info-heading').text(clickedProject.props.heading)
     $('.portfolio__popup--info-paragraph').text(clickedProject.props.description)
     $('.portfolio__popup--info-technologies ul').html(listString);
+    $('.popup__github-link').attr('href', clickedProject.props.github)
     console.log(clickedProject)
 
     $('.portfolio__popup--slideshow-controls-right').click(function () {
