@@ -33,16 +33,13 @@
         </div>
         <div class="intro">
             <div class="intro__img">
-                <object data="/media/icons/triangle.svg" type="image/svg+xml" class="intro__shape" id="intro_triangle"
-                >
+                <object data="/media/icons/triangle.svg" type="image/svg+xml" class="intro__shape" id="intro_triangle">
                     <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
                 </object>
-                <object data="/media/icons/circle.svg" type="image/svg+xml" class="intro__shape" id="intro_circle"
-                >
+                <object data="/media/icons/circle.svg" type="image/svg+xml" class="intro__shape" id="intro_circle">
                     <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
                 </object>
-                <object data="/media/icons/cross.svg" type="image/svg+xml" class="intro__shape" id="intro_cross3"
-                >
+                <object data="/media/icons/cross.svg" type="image/svg+xml" class="intro__shape" id="intro_cross3">
                     <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />
                 </object>
                 <figure class="intro__img--container">
@@ -125,7 +122,8 @@
                 <div class="skill">
                     <i class="fas fa-toolbox skill__icon"></i>
                     <h3 class="skill__name">Useful tools</h3>
-                    <p class="skill__description last">Experience with Scrollmagic & GSAP (Apple-like animations). Knowledge
+                    <p class="skill__description last">Experience with Scrollmagic & GSAP (Apple-like animations).
+                        Knowledge
                         in npm(node package management) and git. Experience with Adobe After Effects & Premiere pro.</p>
                 </div>
             </div>
@@ -140,7 +138,7 @@
                         personal projects, and some of them
                         related to school.</p>
                 </div>
-                <div class="portfolio__item portfolio__item-1">
+                <div id="fylo" class="portfolio__item portfolio__item-1">
                     <div class="portfolio__item--description item-1">
                         <h4 class="portfolio__item--description-client">Challenge project</h4>
                         <h2 class="portfolio__item--description-title">Fylo Dark Theme</h2>
@@ -150,7 +148,7 @@
                         <img src="/media/img/fylo.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-2">
+                <div id="lol" class="portfolio__item portfolio__item-2">
                     <div class="portfolio__item--description item-2">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">LoL Patch Notes</h2>
@@ -160,7 +158,7 @@
                         <img src="/media/img/lol-1.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-3" >
+                <div id="wine" class="portfolio__item portfolio__item-3">
                     <div class="portfolio__item--description item-3">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">Wine Restaurant</h2>
@@ -170,7 +168,7 @@
                         <img src="/media/img/wine.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-4" >
+                <div id="opgg" class="portfolio__item portfolio__item-4">
                     <div class="portfolio__item--description item-4">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">OP.GG clone</h2>
@@ -180,7 +178,7 @@
                         <img src="/media/img/op-gg.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-5">
+                <div id="realestate" class="portfolio__item portfolio__item-5">
                     <div class="portfolio__item--description item-5">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">Real Estate website</h2>
@@ -190,7 +188,7 @@
                         <img src="/media/img/real-estate.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-6">
+                <div id="beautysalon" class="portfolio__item portfolio__item-6">
                     <div class="portfolio__item--description item-6">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">Beauty Salon Beri</h2>
@@ -200,7 +198,7 @@
                         <img src="/media/img/salon-beri.png" alt="">
                     </div>
                 </div>
-                <div class="portfolio__item portfolio__item-7">
+                <div id="mywebsite" class="portfolio__item portfolio__item-7">
                     <div class="portfolio__item--description item-7">
                         <h4 class="portfolio__item--description-client">Personal project</h4>
                         <h2 class="portfolio__item--description-title">Wine Restaurant</h2>
@@ -218,10 +216,45 @@
                 </div>
             </div>
             <button class="portfolio__load-more">Load more</button>
+            <div class="portfolio__popup--container">
+                <div class="portfolio__popup">
+                    <div class="portfolio__popup--slideshow">
+                        <button
+                            class="portfolio__popup--slideshow-controls portfolio__popup--slideshow-controls-left"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <div class="portfolio__popup--slideshow-img">
+                            <img src="media/img/fylo.png" alt="Fylo project">
+                        </div>
+                        <button
+                            class="portfolio__popup--slideshow-controls portfolio__popup--slideshow-controls-right"><i
+                                class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="portfolio__popup--info">
+                        <div class="portfolio__popup--info-container">
+                            <h2 class="portfolio__popup--info-heading">Project name</h2>
+                            <p class="portfolio__popup--info-paragraph">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Ipsa esse placeat saepe. Vitae quas inventore eaque? Reprehenderit ex est dolorum
+                                eveniet
+                                voluptatem laudantium ipsam quis veritatis, eaque optio ratione provident.</p>
+                        </div>
+                        <div class="portfolio__popup--info-technologies">
+                            <h3>Built with</h3>
+                            <ul>
+                                <li>Webpack</li>
+                                <li>CSS grid</li>
+                                <li>SASS</li>
+                            </ul>
+                            <a href="#">Github</a>
+                        </div>
+                    </div>
+                    <i class="fas fa-times-circle portfolio__popup--close"></i>
+                </div>
+            </div>
         </section>
         <section class="about">
             <object data="/media/icons/square.svg" type="image/svg+xml" class="about__shape" id="about_square">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" data-tilt/>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" data-tilt />
             </object>
             <object data="/media/icons/cross.svg" type="image/svg+xml" class="about__shape" id="about_cross">
                 <img src="https://images-na.ssl-images-amazon.com/images/I/81-mDmkhyFL._SL1500_.jpg" />

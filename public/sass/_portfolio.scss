@@ -386,7 +386,7 @@
         text-align: center;
         color: $color-white;
         text-decoration: none;
-        font-size: 10vw;
+        font-size: 3vw;
         transition: all 0.2s;
 
         h3 {
@@ -397,6 +397,217 @@
       &--link:hover {
         transform: scale(1.2);
       }
+    }
+  }
+
+  &__popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 80%;
+    height: 60vh;
+    min-height: 60vh;
+    background-color: $color-white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 2rem 2rem rgba($color: #000000, $alpha: 0.3);
+
+    @media only screen and (orientation:portrait) {
+      flex-direction: column;
+      height: 80vh;
+    }
+
+    @media only screen and (max-width:$bp-mds) {
+      flex-direction: column;
+      height: 80vh;
+    }
+
+    &--container {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      // backdrop-filter: blur(3px);
+      position: fixed;
+      z-index: 9999999999;
+      top: 0;
+      left: 0;
+      display: none;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &--info {
+      width: 40%;
+      text-align: center;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      justify-content: space-between;
+      overflow: scroll;
+
+      @media only screen and (orientation:portrait) {
+        width: 100%;
+        height: 50%;
+      }
+
+      @media only screen and (max-width:$bp-mds) {
+        width: 100%;
+        height: 50%;
+      }
+
+      &-heading {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      &-paragraph {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        color: $color-gray;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      ul {
+        display: flex;
+        // width: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+
+        li {
+          list-style-type: none;
+          margin: 0 1rem;
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: $color-gray;
+        }
+      }
+
+      a,
+      a:visited,
+      a:active {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-blue-primary;
+
+        &:hover {
+          color: $color-blue-primary-light;
+        }
+      }
+    }
+
+    &--slideshow {
+      width: 60%;
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+
+      @media only screen and (orientation:portrait) {
+        width: 100%;
+        height: 50%;
+      }
+
+      @media only screen and (max-width:$bp-mds) {
+        width: 100%;
+        height: 50%;
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        // display: flex;
+        // overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      &-controls {
+        position: absolute;
+        top: 50%;
+        color: white;
+        padding: 1rem;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        background: linear-gradient(to right bottom, rgba($color-blue-primary, 1), rgba($color-blue-primary-light, 1));
+        outline: none;
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.3);
+        margin: 0 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+          background: linear-gradient(to right bottom, rgba($color-blue-primary-light, 1), rgba($color-blue-primary-light, 1));
+        }
+
+        &:active {
+          transform: translateY(-50%) scale(.9);
+        }
+
+        &-left {
+          left: 0;
+        }
+
+        &-right {
+          right: 0;
+        }
+      }
+    }
+
+    &--close {
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      font-size: 4rem;
+      background-color: white;
+      border-radius: 100%;
+      border: none;
+      cursor: pointer;
+      transition: all 0.1s;
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+}
+
+.showItem {
+  // opacity: 1 !important;
+  display: grid !important;
+}
+
+.togglePopup {
+  opacity: 0;
+  display: block !important;
+  transition: all 0.4s;
+  animation: popup 0.4s ease-in forwards;
+
+  @keyframes popup {
+    to {
+      opacity: 1;
     }
   }
 }
